@@ -11,7 +11,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/list" element={<ListPage />} />
-          <Route path="/details" element={<DetailPage />} />
+          <Route path="/detail" element={<DetailPage />} />
         </Routes>
       </HashRouter>
     </>
