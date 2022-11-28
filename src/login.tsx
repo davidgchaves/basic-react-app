@@ -10,7 +10,9 @@ export const LoginPage: React.FC = () => {
   const isValidCredentials = (username: string, password: string) =>
     username === "admin" && password === "test";
 
-  const handleNavigate = () => {
+  const handleNavigate = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     isValidCredentials(username, password)
       ? navigate("/list")
       : alert("Wrong credentials");
