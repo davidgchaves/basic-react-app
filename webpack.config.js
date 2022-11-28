@@ -12,7 +12,11 @@ module.exports = {
     devtool: 'eval-source-map',
     stats: 'errors-only',
     output: {
-        filename: '[name].[chunkhash].js'
+        filename: '[name].[chunkhash].js',
+        publicPath: '/',
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     module: {
         rules: [
