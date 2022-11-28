@@ -17,7 +17,7 @@ export const LoginPage: React.FC = () => {
   };
 
   return (
-    <>
+    <form onSubmit={handleNavigate}>
       <h3>Ola dende Login</h3>
       <div>
         <div>
@@ -39,7 +39,7 @@ export const LoginPage: React.FC = () => {
           />
         </div>
       </div>
-      <button onClick={handleNavigate}>Login</button>
-    </>
+      <button type="submit">Login</button>
+    </form>
   );
 };
