@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { routes } from "core";
+import { AppLayout } from "@/layouts";
 
 interface MemberDetail {
   login: string;
@@ -40,7 +41,7 @@ export const DetailPage: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <AppLayout>
       <h3>Ola dende Detail</h3>
       <p>id: {member.id}</p>
       <p>login: {member.login}</p>
@@ -49,6 +50,6 @@ export const DetailPage: React.FC = () => {
       <p>bio: {member.bio}</p>
       <p>type: {member.type}</p>
       <Link to={routes.list}>Back to List page</Link>
-    </>
+    </AppLayout>
   );
 };

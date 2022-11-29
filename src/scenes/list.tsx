@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { routes } from "core";
+import { AppLayout } from "@/layouts";
 
 interface MemberEntity {
   id: string;
@@ -18,7 +19,7 @@ export const ListPage: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <AppLayout>
       <h3>Ola dende List</h3>
 
       <div className="user-list-container">
@@ -33,6 +34,6 @@ export const ListPage: React.FC = () => {
           </React.Fragment>
         ))}
       </div>
-    </>
+    </AppLayout>
   );
 };

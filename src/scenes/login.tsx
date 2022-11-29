@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { LoginForm } from "../components/loginForm";
+import { LoginForm } from "@/components/loginForm";
 import { routes } from "core";
+import { CenterLayout } from "@/layouts";
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -15,5 +16,9 @@ export const LoginPage: React.FC = () => {
       : alert("Wrong credentials");
   };
 
-  return <LoginForm onSubmit={handleNavigate} />;
+  return (
+    <CenterLayout>
+      <LoginForm onSubmit={handleNavigate} />;
+    </CenterLayout>
+  );
 };
