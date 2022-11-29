@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, generatePath } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { routes } from "core";
 
 interface MemberEntity {
   id: string;
@@ -28,9 +29,7 @@ export const ListPage: React.FC = () => {
           <React.Fragment key={member.id}>
             <img src={member.avatar_url} />
             <span>{member.id}</span>
-            <Link to={generatePath("/detail/:id", { id: member.login })}>
-              {member.login}
-            </Link>
+            <Link to={routes.details(member.login)}>{member.login}</Link>
           </React.Fragment>
         ))}
       </div>

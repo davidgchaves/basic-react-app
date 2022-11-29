@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { LoginForm } from "../components/loginForm";
+import { routes } from "core";
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export const LoginPage: React.FC = () => {
 
   const handleNavigate = (username: string, password: string) => {
     isValidCredentials(username, password)
-      ? navigate("/list")
+      ? navigate(routes.list)
       : alert("Wrong credentials");
   };
 

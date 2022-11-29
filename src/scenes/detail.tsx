@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import { routes } from "core";
 
 interface MemberDetail {
   login: string;
@@ -47,7 +48,7 @@ export const DetailPage: React.FC = () => {
       <p>company: {member.company}</p>
       <p>bio: {member.bio}</p>
       <p>type: {member.type}</p>
-      <Link to="/list">Back to List page</Link>
+      <Link to={routes.list}>Back to List page</Link>
     </>
   );
 };
